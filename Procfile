@@ -1,0 +1,1 @@
+web: separatist-name-generator

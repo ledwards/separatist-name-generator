@@ -15,13 +15,6 @@ func main() {
   m.Use(render.Renderer(render.Options{ Layout: "layout", }))
   m.Use(martini.Static("assets"))
 
-  m.Get("/", func(r render.Render) {
-    name, err := generateName()
-    if err == nil {
-      r.HTML(200, "main", name)
-    }
-  })
-
   m.Run()
 }
 
